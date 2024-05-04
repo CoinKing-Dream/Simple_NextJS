@@ -54,7 +54,7 @@ export default function Home() {
                 <li>
                   <Link href={image_link + ((number < 10) ? ("0" + number) : number) + ".jpg"}
                     data-lightbox={((number < 17) ? "gallery1" : (number < 25) ? "gallery2" : "gallery3")}
-                    data-title="グループ1キャプション">
+                    data-title={((number < 17) ? "グループ1キャプション" : (number < 25) ? "グループ2キャプション" : "グループ3キャプション")}>
                     <Image 
                       src={image_link + ((number < 10) ? ("0" + number) : number) + ".jpg"}
                       width={1000}
