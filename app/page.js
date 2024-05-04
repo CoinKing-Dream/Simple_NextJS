@@ -15,6 +15,11 @@ export default function Home() {
   useEffect(() => {
     if (typeof window!== 'undefined') {
       lightbox.init();
+
+      lightbox.option({
+        'wrapAround': true,
+        'albumLabel': ' %1 / total %2 '
+      })
     }
 
     const fadeAnime = () => {
